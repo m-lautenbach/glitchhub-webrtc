@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 20px Helvetica, Arial;
+  background-color: pink;
+  height: 100vh;
+  width: 100vw;
+  padding: 2em;
+}
+
+main {
+  display: flex;
+  border: 1px solid black;
+  width: 100%;
+  height: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+#chat {
+  display: grid;
+  width: 55%;
+  grid-template-areas:
+    "a a a a"
+    "a a a a"
+    "a a a a"
+    "c c c c"
+    "d d d d";
+  padding: 1em;
+  margin-top: 1em;
+}
+
+#poster {
+  width: 45%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  border-left: 1px solid black;
+}
+
+form {
+  grid-area: c;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1em;
+  width: 100%;
+  height: 100px;
+}
+
+input[type=submit] {
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+}
+
+#warning {
+  grid-area: d;
+  display: flex;
+  padding: 1em;
+  width: 100%;
+  height: 100px;
+  justify-content: center;
+}
+
+#messages {
+  grid-area: a;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  overflow-y: scroll;
+  border: 1px solid black;
+  height: 300px;
+}
+
+#messages li {
+  padding: 5px 10px;
+}
+
+#messages li:nth-child(odd) {
+  background: #eee;
+}
+
+#text {
+  width: 300px;
+  height: 50px;
+}
+/* 
+
+
+form input {
+  border: 0;
+  padding: 10px;
+  width: 90%;
+  margin-right: .5%;
+} */
+
+/*
+form button {
+    border: none;
+    padding: 10px;
+} */
